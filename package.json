@@ -2,11 +2,19 @@
   "name": "app",
   "author": "Laney, Brendan",
   "license": "MIT",
-  "keywords": ["node","password generator","security"],
+  "keywords": [
+    "node",
+    "password generator",
+    "security"
+  ],
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
-  }
+  },
+  "dependencies": {
+    "node-fetch": "^3.0.0"
+  },
+  "type": "module"
 }
