@@ -3,16 +3,16 @@ import arg from 'arg';
 function parseArgumentsIntoOptions(rawArgs) {
   const args = arg(
     {
-      '--yes': Boolean,
-      '--install': Boolean
+      '--capitalize': Boolean,
+      '--c': '--capitalize',
     },
     {
       argv: rawArgs.slice(2),
     }
   );
   return {
-    skipPrompts: args['--yes'] || false,
-    runInstall: args['--install'] || false
+    capitalize: args['--capitalize'] || false, // default: false
+    words: args._[0] || 3, // default: 3
   };
 }
 
