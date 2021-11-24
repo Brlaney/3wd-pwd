@@ -34,4 +34,5 @@ console.log(newData);
 
 module.exports = {
   capitalize,
+  getApiData,
 };
