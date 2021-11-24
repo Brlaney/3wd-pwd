@@ -1,5 +1,4 @@
 import arg from 'arg';
-import inquirer from 'inquirer';
 
 function parseArgumentsIntoOptions(rawArgs) {
   const args = arg(
@@ -23,40 +22,12 @@ function parseArgumentsIntoOptions(rawArgs) {
   };
 }
 
-// async function promptForMissingOptions(options) { 
-//   const defaultCap = false;
-
-//   if (options.skipPrompts) {
-//     return {
-//       ...options,
-//       capitalize: options.capitalize || defaultCap,
-//     };
-//   }
-
-//   const questions = [];
-  
-//   if (!options.capitalize) {
-//     questions.push({
-//       type: 'list',
-//       name: 'capitalize',
-//       message: 'Capitalize the first letter in each word: ',
-//       choices: [
-//         false,
-//         true
-//       ],
-//     })
-//   }
-
-//   const answers = await inquirer.prompt(questions);
-//   return {
-//     ...options,
-//     capitalize: options.capitalize || answers.capitalize,
-//   };
-// }
-
 export async function cli(args) {
   let options = parseArgumentsIntoOptions(args);
-  // options = await promptForMissingOptions(options);
 
-  console.log(options);
+  // Test what the options will output
+  console.log(options.skipPrompts);
+  console.log(options.capitalize);
+  console.log(options.words);
+
 }
